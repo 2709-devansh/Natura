@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Made by Devansh Panthi." />
+    <title>Natura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/CSS" href="CSS/donate_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cacf29784e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="links">
+        <a href="index.html"><h3>Home</h3></a>
+        <a href="about.html"><h3>About Us</h3></a>
+        <a href="contact.html"><h3>Contact Us</h3></a>
+      </div>
+    </div>
+
+    <div class="why">
+      <h1>Build a World where People and Nature thrive</h1>
+      <p>
+        Human activities are destroying the natural world we all depend on for
+        our survival and well-being. The threats grow by the day. But Natura
+        remains hopeful and works tirelessly with people around the world to
+        build a future where humanity and nature thrive.
+      </p>
+      <p>
+        Millions of like-minded individuals are already making their voice
+        heard. But hundreds of millions more must act if we are to have the big
+        impact that's so desperately needed. Every single one of us has a role
+        to play. And supporting Natura guarantees you are doing something
+        positive for the future of people and planet.
+      </p>
+      <p>
+        Our teams of experts work in 20+ countries to protect and restore the
+        natural world that sustains and inspires us. Together, we are champions
+        for coral reefs, rainforests, ice caps and free-flowing rivers. For the
+        many vulnerable communities who are already being harmed by nature loss.
+        And for the many endangered species that cannot speak up for themselves.
+      </p>
+      <div class="link">
+        <a href="#donate" onclick="return hide()"><h4>DONATE NOW</h4></a>
+      </div>
+    </div>
+
+    <script src="JS/hide.js"></script>
+    <script src="JS/tab.js"></script>
+    <script src="JS/modal.js"></script>
+
+    <div id="donation">
+      <div class="tab_nav">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'cash')">
+            CASH
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'card')">
+            CARD
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'online')">
+            ONLINE
+          </button>
+        </div>
+
+        <div id="cash" class="tabcontent">
+          <h3>CASH</h3>
+          <form action="#">
+            <input type="checkbox" required />
+            <p>
+              Send Money in an Envelope to your Nearest Natura Branch via Post!
+            </p>
+            <label for="money"> Amount </label><br />
+            <input
+              type="text"
+              placeholder="$50, $100, $150,......"
+              id="money"
+              required
+            /><br />
+            <input type="submit" value="FINISH" id="submit"/>
+          </form>
+        </div>
+
+        <div id="card" class="tabcontent">
+          <h3>CREDIT/DEBIT CARD</h3>
+          <form action="#">
+            <label for="name" id="name"> Name on the Card </label><br />
+            <input
+              type="text"
+              placeholder="John Doe"
+              id="name"
+              required
+            /><br />
+            <label for="number"> Card Number </label><br />
+            <input
+              type="text"
+              placeholder="---- ---- ----"
+              id="number"
+              maxlength="12"
+              required
+            /><br />
+            <label for="cvv"> CVV </label><br />
+            <input type="password" placeholder="---" id="cvv" required /><br />
+            <label for="date"> Expiration Date </label><br />
+            <input
+              type="text"
+              placeholder="MM/YY"
+              id="date"
+              maxlength="5"
+              required
+            /><br />
+            <label for="money"> Amount </label><br />
+            <input
+              type="text"
+              placeholder="$50, $100, $150,......"
+              id="money"
+              required
+            /><br />
+            <input type="submit" value="DONATE" id="submit" />
+          </form>
+        </div>
+
+        <div id="online" class="tabcontent">
+          <h3>NET BANKING</h3>
+          <form action="#">
+            <input
+              type="radio"
+              value="State Bank of India"
+              id="sbi"
+              name="bank"
+              required
+            />
+            <label for="sbi"> State Bank of India </label><br />
+
+            <input
+              type="radio"
+              value="ICICI Bank"
+              id="icici"
+              name="bank"
+              required
+            />
+            <label for="sbi"> ICICI Bank </label><br />
+
+            <input
+              type="radio"
+              value="Bank of Baroda"
+              id="bob"
+              name="bank"
+              required
+            />
+            <label for="sbi"> Bank of Baroda </label><br />
+
+            <input
+              type="radio"
+              value="Syndicate Bank"
+              id="sb"
+              name="bank"
+              required
+            />
+            <label for="sbi"> Syndicate Bank </label><br />
+
+            <label for="money">Amount</label><br />
+            <input
+              type="text"
+              placeholder="$50, $100, $150,......"
+              id="money"
+              required
+            /><br />
+
+            <input type="submit" value="DONATE" id="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h4> All Rights Reserved &#169 Natura </h4>
+      <h4> Address: Broom St, NY 10002, California, USA </h4>
+      <h4> Email: mailus@natura.com </h4>
+      <h4> Phone: +1 9627654671 </h4>
+      <h4>
+        <a href="https://www.facebook.com/" target="_blank">
+          <span><i class="fa fa-facebook facebook"></i></span>
+        </a>
+        <a href="https://mail.google.com/" target="_blank">
+          <span><i class="fa fa-google-plus"></i></span>
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <span><i class="fa fa-twitter twitter"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <span><i class="fa fa-linkedin linkedin"></i></span>
+        </a>
+      </h4>
+    </div>
+  </body>
+</html>

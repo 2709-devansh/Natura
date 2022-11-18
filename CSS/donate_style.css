@@ -1,0 +1,663 @@
+/* general */
+html {
+  scroll-behavior: smooth;
+  margin: 0%;
+}
+
+body {
+  background-color: rgb(25, 37, 55);
+  margin: 0%;
+}
+
+/* sticky header */
+.header {
+  height: 5rem;
+  background: linear-gradient(to top left, #1a512e 0%, #63a91f 100%);
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.links {
+  margin: 0%;
+  display: flex;
+  align-items: center;
+}
+
+.links h3 {
+  font-family: "Cinzel", serif;
+}
+
+.links a {
+  float: left;
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 601px) {
+  div.header {
+    justify-content: right;
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 301px) {
+  div.header {
+    justify-content: center;
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div.header {
+    justify-content: center;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.links a {
+    font-size: large;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 301px) {
+  div.links a {
+    font-size: small;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div.links a {
+    font-size: x-small;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.links a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.links a {
+  background: white;
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 2vw 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.links a:before {
+  content: "";
+  background: linear-gradient(to top left, #b3f6d8 0%, #52a7c1 100%);
+  display: block;
+  position: absolute;
+  bottom: 35%;
+  left: 0%;
+  width: 0%;
+  height: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.links a:hover {
+  background-position: 0;
+  scale: 1.2;
+  opacity: 1;
+}
+
+.links a:hover::before {
+  width: 70%;
+}
+
+/* why style */
+.why {
+  padding: 3%;
+  background: linear-gradient(to bottom right, #55d284 0%, #f2cf07 100%);
+  width: 80vw;
+  margin: auto;
+  margin-top: 3%;
+  border-radius: 15px;
+}
+
+.why h1 {
+  color: black;
+  font-family: "montserrat";
+  font-size: 50px;
+}
+
+.why p {
+  padding-top: 2%;
+  font-size: x-large;
+  font-family: "josefin sans";
+}
+
+.link a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link a {
+  margin-right: 3%;
+}
+
+.link h4 {
+  padding: 15%;
+  font-family: "josefin sans";
+  font-size: large;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+
+@media screen and (max-width: 300px) {
+  div.why h1 {
+    font-size: large;
+  }
+  div.why p {
+    font-size: small;
+  }
+  div.link h4 {
+    font-size: x-small;
+  }
+  div.link a {
+    margin-right: 15%;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 600px) {
+  div.why h1 {
+    font-size: x-large;
+  }
+  div.why p {
+    font-size: medium;
+  }
+  div.link h4 {
+    font-size: small;
+  }
+  div.link a {
+    margin-right: 15%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  div.why h1 {
+    font-size: 50px;
+  }
+  div.why p {
+    font-size: x-large;
+  }
+  div.link h4 {
+    font-size: large;
+  }
+  div.link a {
+    margin-right: 15%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) and (min-height: 1200px) {
+  div.why h1 {
+    font-size: 50px;
+  }
+  div.why p {
+    font-size: xx-large;
+  }
+  div.link h4 {
+    font-size: large;
+  }
+  div.link a {
+    margin-right: 15%;
+  }
+}
+
+/* Style the tab */
+#donation {
+  display: none;
+}
+
+.tab_nav {
+  width: 95%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.tab {
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #ffffff 0%, #d4d8db 100%);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: medium;
+  font-family: "josefin sans";
+  margin-left: 10%;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background: linear-gradient(to bottom right, #b0f9a9 0%, #17f9f2 100%);
+  color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 3%;
+  border-top: none;
+  background-color: white;
+}
+
+.tab_nav h3 {
+  font-family: "poppins";
+  font-size: x-large;
+  margin-bottom: 3%;
+}
+
+/* cash */
+#cash {
+  padding-bottom: 15%;
+}
+
+#cash p {
+  font-family: "montserrat";
+  font-size: medium;
+  padding-bottom: 2%;
+}
+
+#cash input {
+  float: left;
+}
+
+#cash label {
+  font-family: "montserrat";
+  font-size: medium;
+}
+
+#cash input[type="text"] {
+  margin-top: 2%;
+  width: 90%;
+  padding: 1.5%;
+  font-family: "josefin sans";
+  font-size: medium;
+  margin-bottom: 3%;
+}
+
+#cash input[type="submit"] {
+  border: 1px solid black;
+  padding: 1%;
+  color: black;
+  background: linear-gradient(to bottom right, #f2a65a 0%, #772f1a 100%);
+  text-align: center;
+  width: 20%;
+  font-size: large;
+  font-family: "josefin sans";
+}
+
+#cash input[type="submit"]:hover {
+  scale: 1.1;
+  transition: 0.2s ease-in-out;
+}
+
+/* card */
+#card label {
+  font-family: "montserrat";
+  font-size: medium;
+}
+
+#card input[type="text"] {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 90%;
+  padding: 1.5%;
+  font-family: "josefin sans";
+  font-size: medium;
+}
+
+#card input[type="password"] {
+  margin-bottom: 2%;
+  margin-top: 1%;
+  width: 90%;
+  padding: 1.5%;
+  font-family: "josefin sans";
+  font-size: medium;
+}
+
+#card input[type="submit"] {
+  border: 1px solid black;
+  padding: 1%;
+  color: black;
+  background: linear-gradient(to bottom right, #f2a65a 0%, #772f1a 100%);
+  text-align: center;
+  width: 20%;
+  font-size: large;
+  font-family: "josefin sans";
+  margin-top: 1%;
+}
+
+#card input[type="submit"]:hover {
+  scale: 1.1;
+  transition: 0.2s ease-in-out;
+}
+
+/* online */
+#online label {
+  font-family: "montserrat";
+  font-size: medium;
+}
+
+#online input[type="radio"] {
+  margin-bottom: 1%;
+}
+
+#online input[type="submit"] {
+  border: 1px solid black;
+  padding: 1%;
+  color: black;
+  background: linear-gradient(to bottom right, #f2a65a 0%, #772f1a 100%);
+  text-align: center;
+  width: 20%;
+  font-size: large;
+  font-family: "josefin sans";
+  margin-top: 1%;
+}
+
+#online input[type="submit"]:hover {
+  scale: 1.1;
+  transition: 0.2s ease-in-out;
+}
+
+#online #sb {
+  margin-bottom: 3%;
+}
+
+#online input[type="text"] {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 90%;
+  padding: 1.5%;
+  font-family: "josefin sans";
+  font-size: medium;
+}
+
+@media screen and (max-width: 300px) {
+  .tab_nav {
+    margin-top: 7%;
+  }
+  .tab button {
+    font-size: xx-small;
+    width: 20%;
+    padding: 3%;
+  }
+  .tab_nav h3 {
+    font-size: small;
+  }
+  #cash {
+    padding-bottom: 20%;
+  }
+  #cash p {
+    font-size: x-small;
+    margin-bottom: 1%;
+  }
+  #cash label,
+  #card label,
+  #online label {
+    font-size: x-small;
+  }
+  #cash input[type="text"],
+  #card input[type="text"],
+  #online input[type="text"] {
+    font-size: x-small;
+  }
+  #cash input[type="submit"],
+  #card input[type="submit"],
+  #online input[type="submit"] {
+    font-size: xx-small;
+    width: 30%;
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #online input[type="radio"] {
+    height: 0.5rem;
+  }
+  #cash input[type="checkbox"] {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 600px) {
+  .tab_nav {
+    margin-top: 7%;
+  }
+  .tab button {
+    font-size: x-small;
+    width: 20%;
+    padding: 3%;
+  }
+  .tab_nav h3 {
+    font-size: medium;
+  }
+  #cash {
+    padding-bottom: 20%;
+  }
+  #cash p {
+    font-size: 12px;
+    margin-bottom: 3%;
+  }
+  #cash label,
+  #card label,
+  #online label {
+    font-size: 12px;
+  }
+  #online #sb {
+    margin-bottom: 5%;
+  }
+  #cash input[type="text"],
+  #card input[type="text"],
+  #online input[type="text"] {
+    font-size: 12px;
+  }
+  #cash input[type="submit"],
+  #card input[type="submit"],
+  #online input[type="submit"] {
+    font-size: x-small;
+    width: 30%;
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #online input[type="radio"] {
+    height: 0.6rem;
+  }
+  #cash input[type="checkbox"] {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  #cash {
+    padding-bottom: 20%;
+  }
+  #cash input[type="submit"],
+  #card input[type="submit"],
+  #online input[type="submit"] {
+    font-size: medium;
+    width: 30%;
+    margin-top: 3%;
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px) and (min-height: 1200px) {
+  .tab_nav {
+    margin-top: 7%;
+  }
+  .tab button {
+    font-size: large;
+    width: 20%;
+    padding: 2%;
+  }
+  .tab_nav h3 {
+    font-size: xx-large;
+  }
+  #cash {
+    padding-bottom: 20%;
+  }
+  #cash p {
+    font-size: x-large;
+    margin-bottom: 3%;
+    margin-left: 3%;
+  }
+  #cash label,
+  #card label,
+  #online label {
+    font-size: x-large;
+  }
+  #online #sb {
+    margin-bottom: 5%;
+  }
+  #cash input[type="text"],
+  #card input[type="text"],
+  #online input[type="text"] {
+    font-size: x-large;
+  }
+  #cash input[type="submit"],
+  #card input[type="submit"],
+  #online input[type="submit"] {
+    font-size: large;
+    width: 30%;
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #online input[type="radio"] {
+    height: 0.6rem;
+  }
+  #cash input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+/* contact */
+.contact {
+  background: linear-gradient(
+    to bottom right,
+    #c19a6c,
+    #ba8a65,
+    #b37a5f,
+    #ab6a58,
+    #a45a51
+  );
+  margin-top: 7vw;
+  padding: 0%;
+  text-align: center;
+  margin-bottom: 0%;
+  padding: 1%;
+}
+
+.contact h4 {
+  color: white;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+@media screen and (min-width: 601px) {
+  div.contact h4 {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width: 301px) and (max-width: 600px) {
+  div.contact h4 {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  div.contact h4 {
+    font-size: xx-small;
+  }
+}
+
+.contact a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.facebook {
+  background-color: #4267b2;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.linkedin {
+  background-color: #2867b2;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.fa.fa-google-plus {
+  background-color: #db4a39;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.contact i {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 300px) {
+  .facebook,
+  .twitter,
+  .linkedin,
+  .fa.fa-google-plus {
+    padding: 5px;
+  }
+}
+
+.contact i:hover {
+  scale: 1.3;
+  transition: 0.2s ease-in-out;
+}
